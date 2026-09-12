@@ -19,9 +19,16 @@ CONFIG_PACKAGE_nano=y
 # 如果 luci-app-log 在你的 feed 中不存在，请改成：
 # CONFIG_PACKAGE_luci-app-logview=y
 
+# Argon 主题（解决主题报错，必须同时包含核心包和配置包）
+CONFIG_PACKAGE_luci-theme-argon=y
+CONFIG_PACKAGE_luci-app-argon-config=y
+
 #删除插件
 CONFIG_PACKAGE_luci-app-attendedsysupgrade=n
 CONFIG_PACKAGE_luci-app-wol=n
+
+#保险：避免 UPnP 残留
+CONFIG_PACKAGE_miniupnpd=n
 
 #参数调整
 CONFIG_CCACHE=y
